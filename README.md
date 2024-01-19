@@ -32,6 +32,6 @@
   - as application grows bigger, express router keeps app js clean and easy to maintain
 - since we are sending json from app, in oder to access that data in the routes, in req body
   - use built in middle from express, app.use(express.json())
--
+- make sure all routes work with thunder client before moving on
 
 [Back to Top](#custom_anchor_name)
