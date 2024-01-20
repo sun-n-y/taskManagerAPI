@@ -18,7 +18,7 @@ app.get('/hello', (req, res) => {
 
 app.use('/api/v1/tasks', tasks);
 
-//only if successful server will spin up
+//if successful server will spin up
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);

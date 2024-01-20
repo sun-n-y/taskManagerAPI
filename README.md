@@ -86,5 +86,7 @@
   - to access env variables, use dotenv package,
     - require it = require('dotenv').config()
     - access it = process.env.NAME_OF_ENV
+- structure for future documents
+  -
 
 [Back to Top](#custom_anchor_name)
