@@ -11,6 +11,7 @@
 - ### mongodb atlas
 - ### nosql
 - ### mongoose
+- ### schema & model
 
 ---
 
@@ -86,7 +87,19 @@
   - to access env variables, use dotenv package,
     - require it = require('dotenv').config()
     - access it = process.env.NAME_OF_ENV
-- structure for future documents
-  -
+- structure for future documents and assign them to collection
+  - schema and model from mongoose
+  - schema to setup the structure for all the documents in our collection
+    - syntax will be key value pairs
+    - setup as objects, then pass in more options
+    - ex. for task manager app:
+      - two keys > name and completed
+      - schema type > string and boolean
+      - name: String, completed: Boolean
+    - only properties set in schema will be passed on to the database, everything else will be ignored
+  - model, a representation for the collection
+    - tasks collection
+    - provides an interface to the collection giving us the ability to crud documents
+- persist tasks in cloud database
 
 [Back to Top](#custom_anchor_name)
