@@ -8,8 +8,9 @@
 - ### express router
 - ### routes and controllers
 - ### rest API
-- ### mongodb
+- ### mongodb atlas
 - ### nosql
+- ### mongoose
 
 ---
 
@@ -59,6 +60,31 @@
       - document is a set of key value pairs, can be many data types
   - mongodb atlas
     - host and manage our data in the cloud
-    -
+    - ex.
+      - database(application) = store
+      - collection(inside of database) = list of products, users, or orders etc...
+      - documents (inside collections) = single product, user, or order etc...
+        - set of key value pairs
+        - dynamic schema
+          - documents in the same collection, don't need to have the same set of fields or structure
+          - doesn't mean you should
+  - crud
+    - create = creating an item in a collection
+    - read = read docs we have in the database
+    - update = update a specific document
+    - delete = remove collection
+  - mongoose
+    - once database is ready, we need to connect to from our server
+    - we can use native mongodb driver, but mongoose is better
+    - object data modeling library
+    - npm i mongoose
+- connect to database on the server
+  - connect js file
+  - database name will be created for us, if not provided in connection string
+  - if we have a function in module, if we import it elsewhere we execute it
+  - we want the app to try and connected to database, if successful then spin up server, if not kill the app
+  - to access env variables, use dotenv package,
+    - require it = require('dotenv').config()
+    - access it = process.env.NAME_OF_ENV
 
 [Back to Top](#custom_anchor_name)
