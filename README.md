@@ -108,6 +108,6 @@
   - set it equal to an array for custom msg in index 1
   - read mongoose docs for more validation methods
 - handle errors in controllers gracefully
-  -
+  - with try and catch
 
 [Back to Top](#custom_anchor_name)
