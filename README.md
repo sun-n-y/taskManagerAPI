@@ -101,5 +101,13 @@
     - tasks collection
     - provides an interface to the collection giving us the ability to crud documents
 - persist tasks in cloud database
+- basic validation
+  - for empty values
+  - add it to schema
+  - using built in validators form mongoose
+  - set it equal to an array for custom msg in index 1
+  - read mongoose docs for more validation methods
+- handle errors in controllers gracefully
+  -
 
 [Back to Top](#custom_anchor_name)
