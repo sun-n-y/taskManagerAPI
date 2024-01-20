@@ -7,6 +7,7 @@
 - ### node js
 - ### express router
 - ### routes and controllers
+- ### rest API
 
 ---
 
@@ -33,5 +34,20 @@
 - since we are sending json from app, in oder to access that data in the routes, in req body
   - use built in middle from express, app.use(express.json())
 - make sure all routes work with thunder client before moving on
+- rest api
+  - when building a server, we want to create a http interface, so frontend apps can interact with the data.
+  - representational state transfer, most popular api design pattern
+  - pattern that combines http verbs, route paths, and resources(data)
+  - rest determines how the api looks
+  - json is the common format for sending and receiving data in rest api
+- rest api structure
+  - ex. for the main list of: orders, customers, items, tasks etc..
+  - same endpoint but different methods
+    - GET > api/tasks > get all tasks
+    - POST > api/tasks > create a task
+  - for individual items, use params to point to specific item,
+    - GET > api/tasks/:id > get single task
+    - PUT/PATCH > api/tasks/:id > update task
+    - DELETE > api/tasks/:id > delete task
 
 [Back to Top](#custom_anchor_name)
