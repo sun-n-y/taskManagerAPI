@@ -8,6 +8,8 @@
 - ### express router
 - ### routes and controllers
 - ### rest API
+- ### mongodb
+- ### nosql
 
 ---
 
@@ -49,5 +51,14 @@
     - GET > api/tasks/:id > get single task
     - PUT/PATCH > api/tasks/:id > update task
     - DELETE > api/tasks/:id > delete task
+- mongodb
+  - relational vs non-relational db
+    - major difference, unlike traditional database where we have rows and columns. in mongodb we can store everything as json, and it doesn't care how the data relates to each other
+    - instead of tables we have collections, representing group of items
+    - instead of rows we have documents, representing single items
+      - document is a set of key value pairs, can be many data types
+  - mongodb atlas
+    - host and manage our data in the cloud
+    -
 
 [Back to Top](#custom_anchor_name)
