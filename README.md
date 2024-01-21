@@ -126,7 +126,8 @@
   - res.status(200).json(success:true, data:{ tasks });
   - w/e string value you want to setup
 - route not found 404, custom 404 response
-  -
 - cleaner code
+  - aysnc wrappers for all controllers
+    - make a middleware function
 
 [Back to Top](#custom_anchor_name)
