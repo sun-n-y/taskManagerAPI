@@ -117,7 +117,7 @@
     - runValidators:true
 - patch vs put
   - both for updating a resource, but
-  - put = trying to replace existing resource, with put we have to include overwrite true in options, or else it will behave like patch. default values will still show up\*
+  - put = trying to replace existing resource, with put we have to include overwrite true in options, or else it will behave like patch. default values will still show up
   - patch = partial update, only the properties that are passed to the server will get updated
 - response types
   - many options
@@ -127,7 +127,14 @@
   - w/e string value you want to setup
 - route not found 404, custom 404 response
 - cleaner code
-  - aysnc wrappers for all controllers
+  - async wrappers for all controllers
     - make a middleware function
+  - catch errors in the middlewares
+    - writing error handler in express
+  - error handling
+- port value
+  - hard coded values are okay for local env, but deployment in many env the host(platform the project is hosted on) may want to set to a different values that makes sense to them
+  - they're handling more than one application at a time
+  - we have to use th export values that is in the env file with back up
 
 [Back to Top](#custom_anchor_name)
