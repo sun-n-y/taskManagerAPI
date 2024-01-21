@@ -36,14 +36,28 @@ const getTask = async (req, res) => {
   }
 };
 
-const updateTask = (req, res) => {
-  res.send('update task');
-};
-
 const deleteTask = async (req, res) => {
   try {
     const { id: taskID } = req.params;
     const task = await Task.findOneAndDelete({ _id: taskID });
+    if (!task) {
+      return res.status(404).json({ msg: `task:${taskID}, does not exist` });
+    }
+    res.status(200).json({ task });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ msg: error });
+  }
+};
+
+const updateTask = async (req, res) => {
+  try {
+    const { id: taskID } = req.params;
+    //3 args: condition, pass in new data(which properties your updating), options to run validators and get new values
+    const task = await Task.findOneAndUpdate({ _id: taskID }, req.body, {
+      new: true,
+      runValidators: true,
+    });
     if (!task) {
       return res.status(404).json({ msg: `task:${taskID}, does not exist` });
     }

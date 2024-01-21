@@ -109,5 +109,11 @@
   - read mongoose docs for more validation methods
 - handle errors in controllers gracefully
   - with try and catch
+- in update we have three params
+  - condition
+  - new data we want changed to
+  - options
+    - new:true = return new item that is updated
+    - runValidators:true
 
 [Back to Top](#custom_anchor_name)
