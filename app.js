@@ -7,6 +7,7 @@ const tasks = require('./routes/tasks');
 const connectDB = require('./db/connect');
 //access env variables
 require('dotenv').config();
+const notFound = require('./middleware/not-found');
 
 //middleware - setup static files
 app.use(express.static('./public'));
@@ -19,6 +20,9 @@ app.use(express.json());
 // });
 
 app.use('/api/v1/tasks', tasks);
+
+//custom 404 response
+app.use('*', notFound);
 
 //if successful server will spin up
 const start = async () => {

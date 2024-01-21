@@ -115,5 +115,18 @@
   - options
     - new:true = return new item that is updated
     - runValidators:true
+- patch vs put
+  - both for updating a resource, but
+  - put = trying to replace existing resource, with put we have to include overwrite true in options, or else it will behave like patch. default values will still show up\*
+  - patch = partial update, only the properties that are passed to the server will get updated
+- response types
+  - many options
+  - res.status(200).json({ tasks });
+  - res.status(200).json({ tasks }, amount:tasks.length);
+  - res.status(200).json(success:true, data:{ tasks });
+  - w/e string value you want to setup
+- route not found 404, custom 404 response
+  -
+- cleaner code
 
 [Back to Top](#custom_anchor_name)
