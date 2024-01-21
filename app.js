@@ -8,13 +8,15 @@ const connectDB = require('./db/connect');
 //access env variables
 require('dotenv').config();
 
+//middleware - setup static files
+app.use(express.static('./public'));
 //middleware - to read json data from app
 app.use(express.json());
 
 //routes
-app.get('/hello', (req, res) => {
-  res.status(200).json({ success: true });
-});
+// app.get('/hello', (req, res) => {
+//   res.status(200).json({ success: true });
+// });
 
 app.use('/api/v1/tasks', tasks);
 
